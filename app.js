@@ -136,7 +136,7 @@ let inventorNames = [];
 // Complete the exercise in the space below:
 
 inventorNames = inventors.map((inventor) => {
-    return `{ first: '${inventor.first}', last: '${inventor.last}' }`
+    return { first: inventor.first , last: inventor.last }
 });
 
 // Check your work:
