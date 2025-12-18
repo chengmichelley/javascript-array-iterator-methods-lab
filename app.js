@@ -299,7 +299,8 @@ let isAdultPresent = null;
 // Complete the exercise in the space below:
 
 isAdultPresent = devs.some((person) => {
-    return person.year >= 2007;
+    const currentYear = new Date().getFullYear(); 
+    return currentYear - person.year >= 18; 
 });
 
 // Check your work:
@@ -324,7 +325,8 @@ let isEveryone19OrOlder = null;
 // Complete the exercise in the space below:
 
 isEveryone19OrOlder = devs.every((person) => {
-    return person.year >= 2006;
+    const currentYear = new Date().getFullYear(); 
+    return currentYear - person.year >= 19;
 });
 
 // Check your work:
