@@ -167,7 +167,7 @@ let sortedByBirthYear = [];
 
 // Complete the exercise in the space below:
 
-sortedByBirthYear = inventors.sort((a,b) => a.year - b.year);
+sortedByBirthYear = [...inventors].sort((a,b) => a.year - b.year);
 
 // Check your work:
 console.log('Exercise 3 my result: ', sortedByBirthYear);
@@ -400,7 +400,7 @@ let totalYearsLived = 0;
 
 // Complete the exercise in the space below:
 
-totalYearsLived = inventors.reduce((accumulator, inventor) => accumulator + (inventor.passed - inventor.year), 0);
+totalYearsLived = inventors.reduce((acc, inventor) => acc + (inventor.passed - inventor.year), 0);
 
 // Check your work:
 console.log('Level Up 1 my result: ', totalYearsLived);
@@ -430,13 +430,13 @@ let travelMethodCounts = {};
 
 // Complete the exercise in the space below:
 
-travelMethodCounts = travelMethods.reduce(function(accumulator, method) {
-    if(accumulator[method]){
-        accumulator[method] = accumulator[method] + 1;
+travelMethodCounts = travelMethods.reduce(function(acc, method) {
+    if(acc[method]){
+        acc[method] = acc[method] + 1;
     } else {
-        accumulator[method] = 1;
+        acc[method] = 1;
     }
-    return accumulator;
+    return acc;
 }, {});
 
 // Check your work:
